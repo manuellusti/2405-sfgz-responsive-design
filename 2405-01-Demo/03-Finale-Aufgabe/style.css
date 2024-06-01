@@ -1,0 +1,158 @@
+*,
+html,
+body{
+    padding:0;
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Definitions*/
+:root {
+    --blau: #7798D9;
+    --hellblau: #B8C6D9;
+    --hellgruen: #DBF2C4;
+    --rot: #730202;
+    --background: #F2F2F2;
+  }
+
+/*Settings*/
+body{
+    background-color: var(--background);
+}
+.container{
+    width: 1240px;
+    max-width: 99vw;
+    margin: 0 auto;
+}
+/*Elements*/
+h1{
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 46px;
+    font-weight: 700;
+}
+h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+h4{
+    font-size: 28px;
+    font-weight: 600;
+}
+h5{
+    font-size: 23px;
+    font-weight: 600;
+}
+h6{
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn{
+    padding: 8px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+    margin: 8px 0;
+}
+.btn:hover{
+    padding: 8px 32px;
+}
+.btn.solid{
+    background-color: var(--rot);
+    color: #ffffff;
+    border: none;
+}
+.btn.outline{
+    background-color: unset;
+    color: var(--rot);
+    border: 2px solid var(--rot);
+}
+
+
+/*START Header*/
+#mainheader .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+#mainheader{
+    border-bottom: 1px solid #f3f3f3;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 14px #00000010;
+    position: fixed;
+    width: 100vw;
+}
+
+#mainheader .logo{
+    color: var(--rot);
+}
+
+#mainnav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    list-style-type: none;
+}
+
+/*START Footer*/
+footer{
+    padding:15px;
+    border-top: 1px solid #00000020;
+}
+
+/*Welcome*/
+#welcome{
+    padding: 150px 15px;
+}
+#welcome .container{
+    display: flex;
+    gap: 25px; 
+}
+
+#welcome .left,
+#welcome .right{
+    width: 50%;
+}
+
+/*CARD*/
+.card{
+    background-color: #ffffff;
+    border: 1px solid #fefefe;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+.card .text{
+    padding: 25px;
+}
+.card img{
+    width: 100%;
+    filter: saturate(0);
+    transition: 0.25s ease;
+}
+.card:hover{
+    box-shadow: 0px 0px 20px #00000015;
+}
+.card:hover img{
+    filter: saturate(1);
+}
+
+/*Copilot*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.main-content {
+    grid-column: 1;
+}
+
+.information {
+    grid-column: 2;
+}
