@@ -3,156 +3,111 @@ html,
 body{
     padding:0;
     margin: 0;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--white);
 }
 
 /*Definitions*/
 :root {
-    --blau: #7798D9;
-    --hellblau: #B8C6D9;
-    --hellgruen: #DBF2C4;
+    /*Colors*/
+    --orange: #F29509;
+    --black: #090909;
+    --white: #ffffff;
     --rot: #730202;
-    --background: #F2F2F2;
+    /*Radius*/
+    --radiusS: 6px;
+    --radiusM: 12px;
+    --radiusL: 42px;
   }
 
 /*Settings*/
 body{
-    background-color: var(--background);
+    background-color: var(--black);
 }
 .container{
-    width: 1240px;
+    width: 743px;
     max-width: 99vw;
     margin: 0 auto;
 }
+
 /*Elements*/
 h1{
-    font-size: 56px;
+    font-size: 32px;
+    font-style: normal;
     font-weight: 700;
-    text-transform: uppercase;
+    line-height: normal;
 }
 h2{
-    font-size: 46px;
+    font-size: 24px;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
 }
-h3{
-    font-size: 34px;
+.herotitle{
+    font-size: 48px;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
 }
-h4{
-    font-size: 28px;
-    font-weight: 600;
+.herosubtitle{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
-h5{
-    font-size: 23px;
-    font-weight: 600;
-}
-h6{
-    font-size: 20px;
-    font-weight: 600;
+p,.lauftext{
+    font-size: 14px;
+    font-weight: 400;
 }
 .btn{
-    padding: 8px 24px;
+    padding: 8px 54px;
+    font-size: 20px;
+    font-weight: 700;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    border-radius: 5px;
+    background-color: var(--orange);
     transition: 0.25s ease;
-    margin: 8px 0;
 }
 .btn:hover{
-    padding: 8px 32px;
-}
-.btn.solid{
-    background-color: var(--rot);
-    color: #ffffff;
-    border: none;
-}
-.btn.outline{
-    background-color: unset;
-    color: var(--rot);
-    border: 2px solid var(--rot);
+    filter: drop-shadow(0px 0px 30px #000);
 }
 
 
 /*START Header*/
-#mainheader .container{
+#header{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-}
-#mainheader{
-    border-bottom: 1px solid #f3f3f3;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 14px #00000010;
-    position: fixed;
-    width: 100vw;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: sticky;
 }
 
-#mainheader .logo{
-    color: var(--rot);
+#header .logo{
+    width: 122px;
 }
 
-#mainnav ul{
+#header .badge{
+    background-color: rgba(242, 149, 9, 0.5);
+    padding: 4px 10px;
+    border-radius: var(--radiusS);
+    font-size: 16px;
+    font-weight: 300;
+}
+#header .right{
     display: flex;
-    justify-content: flex-end;
-    gap: 25px;
-    list-style-type: none;
+    align-items: center;
+    gap: 15px;
+}
+#header .right .menuIcon{
+    width: 20px;
+}
+#header .right .userIcon{
+    width: 29px;
 }
 
 /*START Footer*/
 footer{
     padding:15px;
     border-top: 1px solid #00000020;
-}
-
-/*Welcome*/
-#welcome{
-    padding: 150px 15px;
-}
-#welcome .container{
-    display: flex;
-    gap: 25px; 
-}
-
-#welcome .left,
-#welcome .right{
-    width: 50%;
-}
-
-/*CARD*/
-.card{
-    background-color: #ffffff;
-    border: 1px solid #fefefe;
-    border-radius: 22px;
-    overflow: hidden;
-    transition: 0.25s ease;
-}
-.card .text{
-    padding: 25px;
-}
-.card img{
-    width: 100%;
-    filter: saturate(0);
-    transition: 0.25s ease;
-}
-.card:hover{
-    box-shadow: 0px 0px 20px #00000015;
-}
-.card:hover img{
-    filter: saturate(1);
-}
-
-/*Copilot*/
-.grid-container {
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-}
-
-.main-content {
-    grid-column: 1;
-}
-
-.information {
-    grid-column: 2;
 }
