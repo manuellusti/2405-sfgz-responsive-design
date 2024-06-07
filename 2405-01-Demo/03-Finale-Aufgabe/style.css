@@ -44,6 +44,12 @@ h2{
     font-weight: 700;
     line-height: normal;
 }
+h3{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 .heroTitle{
     font-size: 48px;
     font-style: normal;
@@ -140,6 +146,96 @@ p,.lauftext{
     margin: 12px 0;
 }
 
+/*START Content*/
+.selection{
+    padding: 65px 0;
+}
+.selection h1{
+    margin-bottom: 27px;
+}
+.selection .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px;
+}
+@media (max-width: 900px){
+    .selection .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.selection .card{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    border: 1px solid #F29509;
+    height: 179px;
+    display: flex;
+    align-items: end;
+}
+.selection .card .card-inner{
+    padding: 22px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.selection .card:nth-child(1){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-4.jpg) lightgray 50% / cover no-repeat;
+}
+.selection .card:nth-child(2){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-3.jpg) lightgray 50% / cover no-repeat;
+}
+.selection .card:nth-child(3){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-2.jpg) lightgray 50% / cover no-repeat;
+}
+.selection .card:nth-child(4){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-1.jpg) lightgray 50% / cover no-repeat;
+}
+.selection .card ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*START Practice*/
+.practice h1{
+    margin-bottom: 27px;
+}
+.practice .grid-container{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 37px;
+}
+@media (max-width: 900px){
+    .practice .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.practice .card{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    border: 1px solid #F29509;
+    height: 288px;
+    display: flex;
+    align-items: end;
+}
+.practice .card .card-inner{
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.practice .card:nth-child(1){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-1.png) lightgray 50% / cover no-repeat;
+}
+.practice .card:nth-child(2){
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-2.png) lightgray 50% / cover no-repeat;
+}
 
 /*START Footer*/
 footer{
