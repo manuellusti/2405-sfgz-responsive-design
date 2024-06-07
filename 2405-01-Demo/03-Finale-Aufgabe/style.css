@@ -27,8 +27,9 @@ body{
 }
 .container{
     width: 743px;
-    max-width: 99vw;
+    max-width: calc(100vw - 32px);
     margin: 0 auto;
+    padding: 0 16px;
 }
 
 /*Elements*/
@@ -78,17 +79,20 @@ p,.lauftext{
     transition: 0.25s ease;
 }
 .btn:hover{
-    filter: drop-shadow(0px 0px 30px #000);
+    filter: drop-shadow(0px 0px 30px var(--black));
 }
 
 
 /*START Header*/
-#header{
+header{
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
     background-color: rgba(0, 0, 0, 0.4);
     position: sticky;
+    top: 0;
+    z-index: 99;
+    margin-bottom: -67px;
 }
 
 #header .logo{
@@ -114,6 +118,22 @@ p,.lauftext{
     width: 29px;
 }
 
+/*START Footer*/
+footer{
+    background-color: var(--orange);
+    padding: 18px 0;
+}
+footer .container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+footer .socials{
+    color: var(--black);
+    width: 18px;
+}
+
 /*START Hero*/
 .hero{
     height: 368px;
@@ -122,6 +142,8 @@ p,.lauftext{
     border-radius: 0px 0px 43px 43px;
     border-bottom: 1px solid #F29509;
     overflow: hidden;
+    position: relative;
+    z-index: 9;
 }
 .heroInner{
     display: flex;
@@ -137,6 +159,7 @@ p,.lauftext{
 .heroInner .text{
     display: flex;
     flex-direction: column;
+    margin-top: 67px;
 }
 
 .separator{
@@ -147,6 +170,11 @@ p,.lauftext{
 }
 
 /*START Content*/
+.content{
+    padding: 50px 0 100px 0;
+    background: url(img/background-blurred.png) center -400px / cover repeat;
+    margin-top: -50px;
+}
 .selection{
     padding: 65px 0;
 }
@@ -167,11 +195,12 @@ p,.lauftext{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
+    border-radius: var(--radiusM);
     border: 1px solid #F29509;
     height: 179px;
     display: flex;
     align-items: end;
+    transition: 0.2s ease;
 }
 .selection .card .card-inner{
     padding: 22px 26px;
@@ -181,16 +210,16 @@ p,.lauftext{
     width: 100%;
 }
 .selection .card:nth-child(1){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-4.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-4.jpg) lightgray 50% / cover no-repeat;
 }
 .selection .card:nth-child(2){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-3.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-3.jpg) lightgray 50% / cover no-repeat;
 }
 .selection .card:nth-child(3){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-2.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-2.jpg) lightgray 50% / cover no-repeat;
 }
 .selection .card:nth-child(4){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-1.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/box-1.jpg) lightgray 50% / cover no-repeat;
 }
 .selection .card ul{
     padding: 0;
@@ -216,11 +245,12 @@ p,.lauftext{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
+    border-radius: var(--radiusM);
     border: 1px solid #F29509;
     height: 288px;
     display: flex;
     align-items: end;
+    transition: 0.2s ease;
 }
 .practice .card .card-inner{
     padding: 30px 24px;
@@ -231,14 +261,27 @@ p,.lauftext{
     width: 100%;
 }
 .practice .card:nth-child(1){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-1.png) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-1.png) lightgray 50% / cover no-repeat;
 }
 .practice .card:nth-child(2){
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-2.png) lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/practice-2.png) lightgray 50% / cover no-repeat;
+}
+.practice .separator{
+    max-width: 150px;
+    height: 2px;
 }
 
-/*START Footer*/
-footer{
-    padding:15px;
-    border-top: 1px solid #00000020;
+/*Effects*/
+.selection .card:hover,
+.practice .card:hover{
+    filter: drop-shadow(0 0 24px #00000096);
+}
+.selection .card:hover h3,
+.practice .card:hover h3{
+    color: var(--orange);
+}
+
+.selection .card h3,
+.practice .card h3{
+    transition: color 0.2s ease;
 }
