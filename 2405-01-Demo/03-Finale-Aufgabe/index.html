@@ -27,7 +27,11 @@
             <a href="#" class="addMore"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></a>
         </div>
         <div class="right">
-            <img src="img/menu.svg" alt="Menu Icon" class="menuIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22" class="menuIcon toggle">
+                <line y1="1" x2="20" y2="1" stroke-width="2" stroke-linejoin="round"/>
+                <line x1="5" y1="11" x2="20" y2="11" stroke-width="2" stroke-linejoin="round"/>
+                <line x1="-8.74228e-08" y1="21" x2="20" y2="21" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
             <img src="img/user.svg" alt="User Icon" class="userIcon">
             <div class="megaMenu">
                 <div class="container">
@@ -47,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="close">
+                    <div class="close toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </div>
                 </div>
@@ -140,6 +144,7 @@
             <img src="img/socials/x.svg" alt="X (Twitter) Icon" class="socials">
         </div>
     </footer>
-    <script rel="script" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script rel="script" src="script.js" async></script>
 </body>
 </html>
