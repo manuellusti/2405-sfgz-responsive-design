@@ -105,6 +105,31 @@ header{
     border-radius: var(--radiusS);
     font-size: 16px;
     font-weight: 300;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+#header .center{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    padding: 0 40px;
+}
+#header .center .addMore{
+    background-color: rgba(242, 149, 9, 0.5);
+    border-radius: var(--radiusL);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    transition: all 0.2s ease;
+}
+#header .center .addMore svg{
+    width: 16px;
+    fill: var(--white);
 }
 #header .right{
     display: flex;
@@ -116,6 +141,75 @@ header{
 }
 #header .right .userIcon{
     width: 29px;
+}
+/*START MegaMenu*/
+.megaMenu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.60);
+    backdrop-filter: blur(12px);
+    z-index: 99;
+    transition: all 0.2s ease;
+}
+.megaMenu .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.megaMenu .navLinks{
+    display: flex;
+    flex-direction: column;
+}
+.megaMenu .navLinks > span{
+    width: fit-content;
+}
+.megaMenu .navLinks a{
+    font-size: 46px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.2s ease;
+}
+.megaMenu .underline{
+    width: 1%;
+    height: 5px;
+    background-color: var(--orange);
+    display: block;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.megaMenu .navLinks li {
+    display: inline-block;
+}
+.megaMenu .card{
+    background: linear-gradient(0deg, var(--black) 0%, rgba(0, 0, 0, 0.00) 100%), url(img/addict.jpg) lightgray 50% / cover no-repeat;
+    border-radius: var(--radiusM);
+    border: 1px solid #F29509;
+    min-height: 250px;
+    max-height: 900px;
+    height: 50vh;
+    display: flex;
+    align-items: end;
+    transition: 0.2s ease;
+}
+.megaMenu .card-inner{
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.megaMenu .card h3{
+    transition: all 0.2s ease;
 }
 
 /*START Footer*/
@@ -273,15 +367,30 @@ footer .socials{
 
 /*Effects*/
 .selection .card:hover,
-.practice .card:hover{
+.practice .card:hover,
+.megaMenu .card:hover{
     filter: drop-shadow(0 0 24px #00000096);
 }
 .selection .card:hover h3,
-.practice .card:hover h3{
+.practice .card:hover h3,
+.megaMenu .card:hover h3{
     color: var(--orange);
 }
 
 .selection .card h3,
 .practice .card h3{
     transition: color 0.2s ease;
+}
+#header .center .addMore{
+    display: none;
+}
+#header .center:hover .addMore{
+    display: flex;
+}
+#header .center .addMore:hover{
+    background-color: var(--orange);
+}
+.megaMenu .navlinks > span:hover .underline{
+    width: 100%;
+    opacity: 1;
 }
